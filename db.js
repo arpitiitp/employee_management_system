@@ -1,7 +1,7 @@
 const mongoose=require('mongoose');
-
+require('dotenv').config();
 //setting url
-const mongourl=
+const mongourl=process.env.mongo_atlas;
 mongoose.connect(mongourl);
 
 const db=mongoose.connection;
