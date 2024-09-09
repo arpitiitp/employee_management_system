@@ -13,12 +13,13 @@ app.get('/',(req,res)=>{
 const createemployee=require("./Routes/create.js");
 app.use("/create",createemployee);
 
-const searchemployee=require("./Routes/search.js");
+const searchemployee=require("./Routes/search_firstname.js");
 app.use("/search",searchemployee);
 
 
-const port=process.env.PORT || 3000;
- app.listen(port,()=>{
-    console.log("Server id connected to ${PORT}");
- });
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`Server is connected to ${port}`);
+});
+
 
